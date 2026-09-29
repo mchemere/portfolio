@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Global CSS Variables & Reset
+   ========================================================================== */
 :root {
     --bg-dark: #0d1117;
     --card-bg: #161b22;
@@ -24,7 +27,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Page Routing Styles */
+/* ==========================================================================
+   Page Routing & Single-Page Application Views
+   ========================================================================== */
 .page-section {
     display: none;
     opacity: 0;
@@ -37,7 +42,9 @@ body {
     opacity: 1;
 }
 
-/* Navigation Bar */
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -83,7 +90,9 @@ body {
     border-bottom: 2px solid var(--primary);
 }
 
-/* Buttons */
+/* ==========================================================================
+   Buttons & Badges
+   ========================================================================== */
 .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
@@ -139,7 +148,20 @@ body {
     justify-content: center;
 }
 
-/* Sections Base */
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(0, 173, 216, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 173, 216, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Sections Base & Headers
+   ========================================================================== */
 section {
     padding: 4rem 8%;
 }
@@ -160,33 +182,73 @@ section {
     margin-top: 0.4rem;
 }
 
-/* Hero Section */
-.hero {
-    padding: 6rem 8% 4rem;
-    text-align: center;
-    max-width: 900px;
+/* ==========================================================================
+   Hero Section & Profile Image Styling
+   ========================================================================== */
+.hero-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    text-align: left;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 6rem 8% 4rem;
 }
 
-.badge {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    background: rgba(0, 173, 216, 0.1);
-    color: var(--primary);
-    border: 1px solid rgba(0, 173, 216, 0.3);
-    border-radius: 20px;
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+.hero-avatar {
+    flex-shrink: 0;
+    position: relative;
 }
 
-.hero h1 {
+/* Glow Ring behind Profile Picture */
+.hero-avatar::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), #00ffcc);
+    opacity: 0.35;
+    filter: blur(12px);
+    z-index: 0;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.hero-avatar:hover::before {
+    opacity: 0.7;
+    filter: blur(18px);
+}
+
+/* Main Profile Picture (mchemere.jpg) */
+.profile-img {
+    position: relative;
+    z-index: 1;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: block;
+}
+
+.profile-img:hover {
+    transform: scale(1.04) rotate(1deg);
+    border-color: #00ffcc;
+}
+
+.hero-content h1 {
     font-size: 2.6rem;
     color: var(--text-bright);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
-.hero p {
+.hero-content p {
     font-size: 1.1rem;
     color: var(--text-muted);
     margin-bottom: 2rem;
@@ -194,11 +256,12 @@ section {
 
 .hero-actions {
     display: flex;
-    justify-content: center;
     gap: 1rem;
 }
 
-/* Home Stats Grid */
+/* ==========================================================================
+   Home Stats / Highlights Grid
+   ========================================================================== */
 .home-highlights {
     padding-top: 1rem;
 }
@@ -236,7 +299,9 @@ section {
     font-size: 0.9rem;
 }
 
-/* Projects Grid */
+/* ==========================================================================
+   Projects Section Grid
+   ========================================================================== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -296,7 +361,9 @@ section {
     margin-bottom: 1.5rem;
 }
 
-/* Tech Stack Grid */
+/* ==========================================================================
+   Tech Stack Grid
+   ========================================================================== */
 .stack-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -331,7 +398,9 @@ section {
     color: var(--text-muted);
 }
 
-/* Timeline */
+/* ==========================================================================
+   Timeline / Journey Section
+   ========================================================================== */
 .timeline {
     max-width: 750px;
     margin: 0 auto;
@@ -371,7 +440,9 @@ section {
     color: var(--text-muted);
 }
 
-/* Contact Form */
+/* ==========================================================================
+   Contact Form & Footer
+   ========================================================================== */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -402,7 +473,6 @@ section {
     margin-top: 0.5rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -412,7 +482,27 @@ footer {
     margin-top: 2rem;
 }
 
-/* Mobile Responsiveness */
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 900px) {
+    .hero-with-image {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding-top: 4rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 170px;
+        height: 170px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem 5%;
@@ -422,7 +512,7 @@ footer {
         display: none;
     }
 
-    .hero h1 {
+    .hero-content h1 {
         font-size: 2rem;
     }
 
