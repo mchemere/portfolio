@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software & Backend Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="code-bracket">&lt;</span>BackendDev<span class="code-bracket"> /&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#stack">Tech Stack</a></li>
+            <li><a href="#experience">Education & Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-sm">Get in Touch</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="badge"><i class="fa-solid fa-terminal"></i> Software & Backend Engineer</div>
+            <h1>Building Scalable Backend Systems & Algorithmic Engines</h1>
+            <p>Software Engineering graduate from Kiriri Women's University & Apprentice at Zone01 Kisumu specializing in Go backend architectures, Docker containerization, REST APIs, and system-level performance.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> View Projects</a>
+                <a href="https://github.com" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p class="subtitle">A full spectrum of web backends, microservices, and algorithmic solvers</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- RentKe -->
+            <div class="project-card featured">
+                <div class="project-header">
+                    <div>
+                        <span class="featured-badge">Flagship</span>
+                        <h3>RentKe Property Platform</h3>
+                    </div>
+                    <span class="tag">Go • REST API • Docker • PostgreSQL</span>
+                </div>
+                <p>A comprehensive rental property discovery and management system. Features role-based access control (RBAC), JWT authentication, payload validation, and clean database abstractions.</p>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            <!-- push-swap & checker -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>push-swap & checker</h3>
+                    <span class="tag">Go • Algorithms • Stack Operations</span>
+                </div>
+                <p>An algorithmic stack sorter using a restricted set of instructions. Features custom chunking logic and a verification engine to achieve minimal operation counts ($O(N \log N)$ complexity).</p>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            <!-- ascii-art-web & Dockerize -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>ascii-art-web (Dockerized)</h3>
+                    <span class="tag">Go • Docker • HTTP • HTML/CSS</span>
+                </div>
+                <p>An HTTP web service that renders customized ASCII banners. Containerized using multi-stage Docker builds with automated build scripts for isolated production deployments.</p>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            <!-- tetris-optimizer -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>tetris-optimizer</h3>
+                    <span class="tag">Go • Recursive Backtracking • File I/O</span>
+                </div>
+                <p>An optimized algorithm fitting arbitrary geometric tetrominoes into minimal grid dimensions using search-space pruning and recursive backtracking.</p>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            <!-- go-reloaded -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>go-reloaded</h3>
+                    <span class="tag">Go • Text Processing • Regex/Parsing</span>
+                </div>
+                <p>A CLI utility in Go that parses macro instructions, handles numerical conversions (hex/bin), formats punctuation rules, and auto-corrects article usage in raw text.</p>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            <!-- Frontend Auth Interfaces -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Web Application Interfaces</h3>
+                    <span class="tag">HTML5 • CSS3 • JavaScript • REST APIs</span>
+                </div>
+                <p>Client-side interfaces featuring real-time form validation, dynamic login and registration flows, and seamless integration with backend REST endpoints.</p>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="stack-section">
+        <div class="section-header">
+            <h2>Technical Toolkit</h2>
+            <p class="subtitle">Languages, tools, and practices used daily in development</p>
+        </div>
+
+        <div class="stack-grid">
+            <div class="stack-card">
+                <i class="fa-brands fa-golang stack-icon"></i>
+                <h3>Go (Golang)</h3>
+                <p>Backend microservices, `net/http` handlers, custom middleware, unit testing, concurrency, and code formatting (`gofumpt`).</p>
+            </div>
+            <div class="stack-card">
+                <i class="fa-brands fa-docker stack-icon"></i>
+                <h3>DevOps & Containers</h3>
+                <p>Docker multi-stage builds, shell scripting (`bash`), environment containerization, and deployment setup.</p>
+            </div>
+            <div class="stack-card">
+                <i class="fa-solid fa-code-branch stack-icon"></i>
+                <h3>Git & Version Control</h3>
+                <p>Interactive staging, rebasing, branch management, merge conflict resolution, Personal Access Tokens, and Gitea/GitHub workflows.</p>
+            </div>
+            <div class="stack-card">
+                <i class="fa-solid fa-terminal stack-icon"></i>
+                <h3>Linux & Environment</h3>
+                <p>Shell utilities, environment configuration (`GOPATH`, `GOCACHE`), network diagnostic tools (`dig`, `nslookup`), and terminal tooling.</p>
+            </div>
+            <div class="stack-card">
+                <i class="fa-solid fa-diagram-project stack-icon"></i>
+                <h3>Data Structures & Algorithms</h3>
+                <p>Recursive backtracking, stack manipulation, chunk sorting, constraint validation, complexity analysis.</p>
+            </div>
+            <div class="stack-card">
+                <i class="fa-brands fa-js stack-icon"></i>
+                <h3>Web & Frontend</h3>
+                <p>HTML5, CSS3, JavaScript (ES6+), DOM manipulation, dynamic form handling, fetch API integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Journey Section -->
+    <section id="experience" class="timeline-section">
+        <div class="section-header">
+            <h2>Education & Journey</h2>
+            <p class="subtitle">Academic foundations paired with practical apprenticeship training</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Zone01 Kisumu • Apprenticeship</span>
+                    <h3>Software Engineering Apprentice</h3>
+                    <p>Immersive, peer-to-peer software engineering apprenticeship focused on deep Go systems development, low-level algorithmic challenges, containerized applications, and web architectures.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Kiriri Women's University of Science and Technology</span>
+                    <h3>Software Engineering Studies</h3>
+                    <p>Acquired strong CS foundations in object-oriented programming, relational database management, systems design principles, and software engineering methodologies.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Hackathons & Community</span>
+                    <h3>Hackathons & Technical Events</h3>
+                    <p>Active participant in local technical events including the Green Economy Hackathon, YERH Training Workshop co-hosted by Zone01 Kisumu & KCA University, and the Rotary AI & Software Mini-Conference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Let's Connect</h2>
+            <p class="subtitle">Open for backend engineering roles, technical collaborations, or discussions!</p>
+        </div>
+
+        <form class="contact-form" onsubmit="handleContact(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <p id="form-status" class="form-status"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Developer Portfolio • Built with Go & Modern Web Standards.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
