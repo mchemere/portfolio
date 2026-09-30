@@ -1,16 +1,21 @@
-// Page Router Function
+/**
+ * Navigation Router for Single Page Application
+ * Handles tab switching without full page reload
+ */
 function navigateTo(pageId) {
-    // 1. Hide all page sections
-    const pages = document.querySelectorAll('.page-section');
-    pages.forEach(page => page.classList.remove('active'));
+    // Hide all sections
+    const sections = document.querySelectorAll('.page-section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
 
-    // 2. Show target page section
-    const targetPage = document.getElementById(`page-${pageId}`);
-    if (targetPage) {
-        targetPage.classList.add('active');
+    // Show target section
+    const targetSection = document.getElementById(`page-${pageId}`);
+    if (targetSection) {
+        targetSection.classList.add('active');
     }
 
-    // 3. Update navbar links active state
+    // Update nav links active state
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         if (link.getAttribute('data-page') === pageId) {
@@ -20,24 +25,44 @@ function navigateTo(pageId) {
         }
     });
 
-    // 4. Scroll smooth to top
+    // Scroll to top of viewport
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Contact form handler
+/**
+ * Handle Contact Form Submission
+ */
 function handleContact(event) {
     event.preventDefault();
-    const status = document.getElementById("form-status");
-    status.textContent = "Thank you! Your message has been sent.";
-    event.target.reset();
+    const statusText = document.getElementById('form-status');
+    
+    // Simulate async submission
+    statusText.style.color = '#00f0ff';
+    statusText.textContent = 'Sending message...';
+
+    setTimeout(() => {
+        statusText.style.color = '#10b981';
+        statusText.textContent = 'Thank you! Your message has been sent successfully.';
+        
+        // Reset form input fields
+        document.getElementById('contact-name').value = '';
+        document.getElementById('contact-email').value = '';
+        document.getElementById('contact-message').value = '';
+    }, 1200);
 }
 
-// Handle initial URL Hash navigation (e.g., portfolio.com/#projects)
-document.addEventListener("DOMContentLoaded", () => {
+// Handle browser back/forward buttons via hash navigation
+window.addEventListener('hashchange', () => {
     const hash = window.location.hash.replace('#', '');
-    if (hash && ['home', 'projects', 'about', 'contact'].includes(hash)) {
+    if (['home', 'projects', 'articles', 'about', 'contact'].includes(hash)) {
         navigateTo(hash);
-    } else {
-        navigateTo('home');
+    }
+});
+
+// Initial load check
+document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (['home', 'projects', 'articles', 'about', 'contact'].includes(hash)) {
+        navigateTo(hash);
     }
 });

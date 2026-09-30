@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software & Backend Engineer Portfolio</title>
+    <title>Miriam Chemeres — Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,51 +13,98 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-brand" onclick="navigateTo('home')">
-            <span class="code-bracket">&lt;</span>BackendDev<span class="code-bracket"> /&gt;</span>
+            <span class="code-bracket">&lt;</span>MC<span class="code-bracket"> /&gt;</span>
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="nav-link active" data-page="home" onclick="navigateTo('home')">Home</a></li>
             <li><a href="#projects" class="nav-link" data-page="projects" onclick="navigateTo('projects')">Projects</a></li>
-            <li><a href="#about" class="nav-link" data-page="about" onclick="navigateTo('about')">About & Journey</a></li>
+            <li><a href="#articles" class="nav-link" data-page="articles" onclick="navigateTo('articles')">Articles</a></li>
+            <li><a href="#about" class="nav-link" data-page="about" onclick="navigateTo('about')">About</a></li>
             <li><a href="#contact" class="nav-link" data-page="contact" onclick="navigateTo('contact')">Contact</a></li>
         </ul>
-        <button onclick="navigateTo('contact')" class="btn btn-outline btn-sm">Get in Touch</button>
+        <div class="nav-actions">
+            <a href="resume.pdf" download class="btn btn-outline btn-sm"><i class="fa-solid fa-download"></i> Resume</a>
+            <button onclick="navigateTo('contact')" class="btn btn-primary btn-sm">Get in Touch</button>
+        </div>
     </nav>
 
     <!-- PAGE 1: HOME PAGE -->
     <main id="page-home" class="page-section active">
-        <section class="hero hero-with-image">
+        <section class="hero">
             <div class="hero-avatar">
-                <img src="images/mchemere.jpg" alt="Profile Picture" class="profile-img">
+                <img src="images/mchemere.jpg" alt="Miriam Chemeres" class="profile-img">
             </div>
             <div class="hero-content">
-                <div class="badge"><i class="fa-solid fa-terminal"></i> Software & Backend Engineer</div>
-                <h1>Building High-Concurrency Backends & Scalable Systems</h1>
-                <p>Software Engineering student from Kiriri Women's University & Apprentice at Zone01 Kisumu. Specializing in Go backend systems, Docker containerization, REST APIs, and system-level performance.</p>
+                <div class="badge"><i class="fa-solid fa-code"></i> Full-Stack Developer</div>
+                <h1>Hi, I'm Miriam Chemeres</h1>
+                <p class="hero-lead">A software engineering apprentice at <strong>Zone01 Kisumu</strong>, passionate about building robust backends, clean frontends, and everything in between.</p>
+                <p class="hero-sub">A woman in tech — on a mission to prove that code has no gender. From Kiriri Women's University to Piscine to Zone01, I'm writing my own story.</p>
+                
                 <div class="hero-actions">
-                    <button onclick="navigateTo('projects')" class="btn btn-primary"><i class="fa-solid fa-code"></i> Explore Projects</button>
-                    <button onclick="navigateTo('about')" class="btn btn-secondary"><i class="fa-solid fa-user"></i> About Me</button>
+                    <button onclick="navigateTo('projects')" class="btn btn-primary"><i class="fa-solid fa-code"></i> View My Work</button>
+                    <button onclick="navigateTo('contact')" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Get in Touch</button>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/mchemere" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/miriam-chepkorir-1750b141b/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/mchemere1" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://dev.to/chemeres_miriam_6811ac75d" target="_blank" aria-label="Dev.to"><i class="fa-brands fa-dev"></i></a>
+                    <a href="mailto:chemeresmiriam@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="home-highlights">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>Go (Golang)</h3>
-                    <p>Core Language Focus</p>
+        <!-- Journey Section -->
+        <section class="journey-section">
+            <div class="section-header">
+                <h2>My Journey</h2>
+                <p class="subtitle">The path that brought me here</p>
+            </div>
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <div class="journey-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Kiriri Women's University</h3>
+                    <p class="journey-role">Software Engineering Student</p>
+                    <p>Where it all began. Built a strong foundation in computer science, database systems, and software design — as a woman in a space still dominated by men.</p>
                 </div>
-                <div class="stat-card">
-                    <h3>RentKe</h3>
-                    <p>Flagship Project Platform</p>
+                <div class="journey-card">
+                    <div class="journey-icon"><i class="fa-solid fa-swimmer"></i></div>
+                    <h3>Piscine</h3>
+                    <p class="journey-role">Intensive Coding Bootcamp</p>
+                    <p>One month of pure immersion. C, algorithms, shell scripting, and relentless problem-solving. I earned my place — and my confidence — here.</p>
                 </div>
-                <div class="stat-card">
+                <div class="journey-card">
+                    <div class="journey-icon"><i class="fa-solid fa-laptop-code"></i></div>
                     <h3>Zone01 Kisumu</h3>
-                    <p>Apprentice Developer</p>
+                    <p class="journey-role">Software Engineering Apprentice</p>
+                    <p>Currently building full-stack applications with Go, JavaScript, Docker, and PostgreSQL in a collaborative, real-world environment.</p>
                 </div>
-                <div class="stat-card">
-                    <h3>Kiriri Women's Univ.</h3>
-                    <p>Software Engineering</p>
+            </div>
+        </section>
+
+        <!-- Quick Highlights -->
+        <section class="highlights-section">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fa-brands fa-golang"></i>
+                    <h3>Go</h3>
+                    <p>Backend systems & APIs</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fa-brands fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interactive frontends</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fa-brands fa-docker"></i>
+                    <h3>Docker</h3>
+                    <p>Containerized deployments</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>PostgreSQL</h3>
+                    <p>Database design</p>
                 </div>
             </div>
         </section>
@@ -68,9 +115,11 @@
         <section class="projects-section">
             <div class="section-header">
                 <h2>Featured Projects</h2>
-                <p class="subtitle">A full spectrum of web backends, microservices, and algorithmic solvers</p>
+                <p class="subtitle">Internal collaborations and personal builds</p>
             </div>
 
+            <!-- Personal Projects -->
+            <h3 class="project-category"><i class="fa-solid fa-user"></i> Personal Projects</h3>
             <div class="projects-grid">
                 <!-- RentKe -->
                 <div class="project-card featured">
@@ -79,23 +128,11 @@
                             <span class="featured-badge">Flagship Project</span>
                             <h3>RentKe Property Management</h3>
                         </div>
-                        <span class="tag">Go • REST API • Docker • PostgreSQL</span>
+                        <span class="tag">Full-Stack • Go • JavaScript • PostgreSQL • Docker</span>
                     </div>
-                    <p>A comprehensive property discovery and rental management platform. Built with a modular Go backend, role-based access control (RBAC), JWT authentication, and clean database abstraction.</p>
+                    <p>A comprehensive end-to-end property discovery and rental management platform. Features interactive landlord/tenant dashboards, RBAC routing, JWT authentication, and a modular backend.</p>
                     <div class="project-footer">
-                        <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
-                    </div>
-                </div>
-
-                <!-- push-swap & checker -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>push-swap & checker</h3>
-                        <span class="tag">Go • Algorithms • Stack Operations</span>
-                    </div>
-                    <p>An algorithmic stack sorter using a restricted set of instructions. Features custom chunking logic and a verification engine to minimize operation steps.</p>
-                    <div class="project-footer">
-                        <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
+                        <a href="https://github.com/mchemere/rentke" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
                     </div>
                 </div>
 
@@ -103,23 +140,11 @@
                 <div class="project-card">
                     <div class="project-header">
                         <h3>ascii-art-web (Dockerized)</h3>
-                        <span class="tag">Go • Docker • HTTP • HTML/CSS</span>
+                        <span class="tag">Go • HTTP • HTML/CSS • Docker</span>
                     </div>
-                    <p>An HTTP web service that renders customized ASCII banners. Containerized using multi-stage Docker builds with automated build scripts for isolated deployments.</p>
+                    <p>Full-stack web application serving dynamic ASCII art banners. Built with responsive web UI, Go HTTP handlers, and containerized via multi-stage Docker builds.</p>
                     <div class="project-footer">
-                        <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
-                    </div>
-                </div>
-
-                <!-- tetris-optimizer -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>tetris-optimizer</h3>
-                        <span class="tag">Go • Recursive Backtracking • File I/O</span>
-                    </div>
-                    <p>An optimized algorithm fitting arbitrary geometric tetrominoes into minimal grid dimensions using search-space pruning and recursive backtracking.</p>
-                    <div class="project-footer">
-                        <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
+                        <a href="https://github.com/mchemere/ascii-art-web" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
                     </div>
                 </div>
 
@@ -129,90 +154,208 @@
                         <h3>go-reloaded</h3>
                         <span class="tag">Go • Text Processing • Parsing</span>
                     </div>
-                    <p>A CLI text completion and formatting tool in Go that parses macros, auto-corrects article usage, and handles hex/bin conversions.</p>
+                    <p>A CLI text completion and formatting tool in Go that parses macros, auto-corrects article usage, fixes punctuation spacing, and handles base conversions.</p>
                     <div class="project-footer">
-                        <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
+                        <a href="https://github.com/mchemere/go-reloaded" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internal Projects -->
+            <h3 class="project-category"><i class="fa-solid fa-users"></i> Internal Projects</h3>
+            <div class="projects-grid">
+                <!-- AXIS -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AXIS</h3>
+                        <span class="tag">Collaborative Project</span>
+                    </div>
+                    <p>An internal collaborative project built with a team. Working across roles, contributing to full-stack development, and learning the dynamics of real-world software teams.</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/carsonak/AXIS" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> View Repo</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- PAGE 3: ABOUT & JOURNEY PAGE -->
+    <!-- PAGE 3: ARTICLES PAGE -->
+    <main id="page-articles" class="page-section">
+        <section class="articles-section">
+            <div class="section-header">
+                <h2>Articles & Writing</h2>
+                <p class="subtitle">Thoughts on tech, learning, and being a woman in software engineering</p>
+            </div>
+
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="article-content">
+                        <span class="article-date">Coming Soon</span>
+                        <h3>My Journey Through Piscine</h3>
+                        <p>What I learned in one month of intense coding bootcamp — and why it changed everything for me.</p>
+                        <a href="https://dev.to/chemeres_miriam_6811ac75d" target="_blank" class="article-link">Read on Dev.to <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="article-content">
+                        <span class="article-date">Coming Soon</span>
+                        <h3>Being a Woman in Tech: My Story</h3>
+                        <p>Navigating a male-dominated industry, finding my voice, and why diversity makes us all better developers.</p>
+                        <a href="https://dev.to/chemeres_miriam_6811ac75d" target="_blank" class="article-link">Read on Dev.to <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="article-content">
+                        <span class="article-date">Coming Soon</span>
+                        <h3>Why Go Is My Favorite Backend Language</h3>
+                        <p>Simplicity, performance, and concurrency — here's why Go won me over as a backend developer.</p>
+                        <a href="https://dev.to/chemeres_miriam_6811ac75d" target="_blank" class="article-link">Read on Dev.to <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PAGE 4: ABOUT PAGE -->
     <main id="page-about" class="page-section">
         <section class="about-section">
             <div class="section-header">
-                <h2>About & Academic Journey</h2>
-                <p class="subtitle">CS foundations paired with immersive peer-to-peer software engineering</p>
+                <h2>About Me</h2>
+                <p class="subtitle">Combining modern frontend craftsmanship with resilient backend architecture</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-photo">
+                    <img src="images/mish.jpg" alt="Miriam Chemeres" class="about-img">
+                </div>
+                <div class="about-text">
+                    <p>I'm a software engineering apprentice who thrives on solving problems with code. My journey started at Kiriri Women's University, where I discovered not just a passion for technology, but a calling — to be a woman in tech in a space that's still too often seen as a man's world.</p>
+                    <p>After university, I took on <strong>Piscine</strong> — a grueling month-long coding bootcamp that pushed me to my limits. It was there I learned that I belonged. Now at <strong>Zone01 Kisumu</strong>, I'm building real-world applications with Go, JavaScript, Docker, and PostgreSQL.</p>
+                    <p>As a woman in tech, I bring a perspective that the industry needs more of — resilience, empathy, and the drive to build things that matter. I'm looking for opportunities where I can contribute, grow, and prove that talent has no gender.</p>
+                </div>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div class="hobbies-section">
+                <h3 class="hobbies-title"><i class="fa-solid fa-heart"></i> Hobbies & Interests</h3>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h4>Reading</h4>
+                        <p>Tech blogs, sci-fi, and personal development books</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fa-solid fa-music"></i>
+                        <h4>Music</h4>
+                        <p>Afrobeats, gospel, and lo-fi playlists while coding</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fa-solid fa-person-walking"></i>
+                        <h4>Walking</h4>
+                        <p>Clearing my mind and staying active</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>Community</h4>
+                        <p>Mentoring and supporting other women in tech</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h4>Gaming</h4>
+                        <p>Puzzle and strategy games to sharpen my mind</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h4>Coffee</h4>
+                        <p>Fuel for late-night coding sessions</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Tech Stack Grid -->
             <div class="stack-grid">
                 <div class="stack-card">
+                    <i class="fa-brands fa-js stack-icon"></i>
+                    <h3>Frontend</h3>
+                    <p>HTML5, CSS3, JavaScript (ES6+), responsive design, SPA navigation, REST API integration.</p>
+                </div>
+                <div class="stack-card">
                     <i class="fa-brands fa-golang stack-icon"></i>
-                    <h3>Go (Golang)</h3>
-                    <p>Backend web services (`net/http`), route handlers, unit testing, and code formatting (`gofumpt`).</p>
+                    <h3>Backend</h3>
+                    <p>Go (Golang) HTTP servers, modular architecture, RESTful API design, authentication.</p>
                 </div>
                 <div class="stack-card">
                     <i class="fa-brands fa-docker stack-icon"></i>
-                    <h3>DevOps & Containers</h3>
-                    <p>Multi-stage Docker builds, shell scripting (`bash`), environment containerization, and setup automation.</p>
+                    <h3>DevOps</h3>
+                    <p>Multi-stage Docker builds, shell scripting, Linux CLI workflows, environment orchestration.</p>
                 </div>
                 <div class="stack-card">
-                    <i class="fa-solid fa-code-branch stack-icon"></i>
-                    <h3>Git & Linux Shell</h3>
-                    <p>Interactive staging, rebasing, merge conflict resolution, and Linux network diagnostics (`dig`, `nslookup`).</p>
-                </div>
-            </div>
-
-            <!-- Timeline -->
-            <div class="timeline" style="margin-top: 4rem;">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Zone01 Kisumu • Apprentice</span>
-                        <h3>Software Engineering Apprenticeship</h3>
-                        <p>Immersive peer-to-peer programming curriculum focused on low-level Go architectures, algorithmic problem-solving, containerization, and web servers.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Kiriri Women's University of Science & Tech</span>
-                        <h3>Software Engineering Studies</h3>
-                        <p>Acquired strong academic foundations in software design, database management systems, and object-oriented programming principles.</p>
-                    </div>
+                    <i class="fa-solid fa-database stack-icon"></i>
+                    <h3>Databases</h3>
+                    <p>PostgreSQL, SQL query writing, Git version control, interactive rebasing, branch management.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- PAGE 4: CONTACT PAGE -->
+    <!-- PAGE 5: CONTACT PAGE -->
     <main id="page-contact" class="page-section">
         <section class="contact-section">
             <div class="section-header">
                 <h2>Get In Touch</h2>
-                <p class="subtitle">Open for backend engineering roles, projects, or collaborations!</p>
+                <p class="subtitle">Open to full-stack & backend engineering roles, internships, and collaborations</p>
             </div>
 
-            <form class="contact-form" onsubmit="handleContact(event)">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about tech.</p>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>chemeresmiriam@gmail.com</span>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Kisumu, Kenya</span>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/mchemere" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/miriam-chepkorir-1750b141b/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/mchemere1" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://dev.to/chemeres_miriam_6811ac75d" target="_blank" aria-label="Dev.to"><i class="fa-brands fa-dev"></i></a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                <p id="form-status" class="form-status"></p>
-            </form>
+
+                <form class="contact-form" onsubmit="handleContact(event)">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Developer Portfolio • Built with Go & Modern Web Standards.</p>
+        <div class="footer-social">
+            <a href="https://github.com/mchemere" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/miriam-chepkorir-1750b141b/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/mchemere1" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://dev.to/chemeres_miriam_6811ac75d" target="_blank" aria-label="Dev.to"><i class="fa-brands fa-dev"></i></a>
+        </div>
+        <p>&copy; 2026 Miriam Chemeres • Built with Go, JavaScript, & Modern Web Standards.</p>
     </footer>
 
     <script src="script.js"></script>
